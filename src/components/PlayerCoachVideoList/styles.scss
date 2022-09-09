@@ -1,0 +1,35 @@
+.video-heading {
+    font-family: 'Spantaran';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 37.7783px;
+    line-height: 169.5%;
+    color: #E4F0FB;
+}
+
+.video-container {
+    width: 30%;
+    img {
+      width: 100%;    
+    }
+    .title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 212%;
+        color: #E4F0FB;
+        opacity: 0.9;
+    }
+    .description {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 150%;
+        color: #FFFFFF;
+        opacity: 0.9;
+    }
+}
+
+.s-1st {
+  margin-left: 2%;
+}

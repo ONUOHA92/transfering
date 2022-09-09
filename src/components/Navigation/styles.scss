@@ -1,0 +1,20 @@
+@import "../../styles/variables.scss";
+@import "../../styles/index.scss";
+
+#navigation {
+  transition: 300ms ease-in-out;
+  #pane-1 {
+    width: 33.3%;
+    color: white !important;
+  }
+  #pane-2 {
+    width: 33.3%;
+  }
+  #pane-3 {
+    width: 33.3%;
+  }
+}
+
+.dark-background {
+  background: black;
+}

@@ -1,0 +1,85 @@
+@import "./variables.scss";
+@import "./defaults.scss";
+
+$input-background: #e9f1f8;
+
+.plus-jakarta {
+  font-family: "Plus Jakarta Text", sans-serif !important;
+}
+
+.spantaran {
+  font-family: "Spantaran", sans-serif !important;
+}
+
+.yeseva-one {
+  font-family: "Yeseva One", sans-serif !important;
+}
+
+.manrope {
+  font-family: 'Signika Negative', sans-serif !important;
+}
+
+.red-text-color {
+  color: $red-text-color;
+}
+
+.blue-text-color {
+  color: $blue-text-color;
+}
+
+.subject {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 169.5%;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.flex-layout {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $general-break-point) {
+    flex-direction: row;
+  }
+}
+
+.display-card-container {
+  width: 33.3% !important;
+}
+
+.form-container {
+  @media (min-width: $general-break-point) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+.scrolled-hidden {
+  overflow: hidden !important;
+}
+
+.scrolled {
+  overflow-x: auto;
+}
+
+.input {
+  background: $input-background;
+  border: 1px solid #e4f0fb;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}

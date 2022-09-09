@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.biography-container {
+    background: radial-gradient(158.47% 95.91% at -49.58% 15.24%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: inset -3.46337px -3.46337px 173.168px rgba(255, 255, 255, 0.02), inset 3.46337px 3.46337px 2.77069px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(29.0923px);
+    border-radius: 8px;
+    border: $border-for-transparent-element;
+
+    .biography-heading {
+        font-family: 'Spantaran';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 37.7783px;
+        line-height: 169.5%;
+        color: #E4F0FB;
+    }
+}
+
+.player-coach-image {
+    border-radius: 18px;
+}
+
+.player-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 169.5%;
+    color: #E4F0FB;
+}

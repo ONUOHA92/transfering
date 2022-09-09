@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+#home {
+    background: #e9f1f8 !important;
+}
+
+#about-box {
+    background: linear-gradient(180deg, #060909 8.69%, #000000 100%);
+    backc #about-us-heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 131.813px;
+        line-height: 169.5%;
+        color: #E4F0FB;
+    }
+}
+
+#about-content-container {
+    background: black;
+    #fire-ball {
+        background-image: url("../../static/images/fire-ball.png");
+        background-position: top;
+        background-size: cover;
+        padding-bottom: 1px;
+        #fire-ball-overlay {
+            background: rgba(0, 0, 0, 0.9);
+            height: auto;
+            .about-text {
+                color: white;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 22.2px;
+                line-height: 189%;
+                color: #FFFFFF;
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+#inner-spacing {
+    @media (min-width: $general-break-point) {
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+}

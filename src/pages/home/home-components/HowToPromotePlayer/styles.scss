@@ -1,0 +1,45 @@
+@import "../../../../styles/variables.scss";
+
+#player-focus-container {
+  #promote-a-player {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 130.328px;
+    line-height: 100.5%;
+  }
+}
+
+.numbering {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 49px;
+}
+
+.steps {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 169.5%;
+  color: #000000;
+  opacity: 0.9;
+}
+
+.dashed-line {
+  height: 50px;
+  width: 1px;
+  border: 0.5px dashed $blue-background-color;
+}
+
+#space-in-between {
+  @media (min-width: $general-break-point) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+#side-2-space {
+  @media (min-width: $general-break-point) {
+    padding-left: 70px;
+  }
+}

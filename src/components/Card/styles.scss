@@ -1,0 +1,72 @@
+@import "../../styles/variables.scss";
+
+.display-card {
+  background: radial-gradient(158.47% 95.91% at -49.58% 15.24%,
+      rgba(255, 255, 255, 0.082) 0%,
+      rgba(255, 255, 255, 0.082) 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  ;
+  box-shadow: inset -3.46337px -3.46337px 173.168px rgba(255, 255, 255, 0.02),
+    inset 3.46337px 3.46337px 2.77069px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(29.0923px);
+  /* Note: backdrop-filter has minimal browser support */
+  width: 100%;
+
+  border-radius: 8px;
+
+  .display-card-image {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .product-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #ffffff;
+    opacity: 0.9;
+  }
+
+  .amount {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #ffffff;
+    text-shadow: 0px 0px 50px #000000;
+  }
+}
+
+.product-name-2 {
+  font-size: 25px !important;
+}
+
+.amount-2 {
+  font-size: 28px !important;
+}
+
+.text-content {
+  font-size: 25px !important;
+}
+
+.layout-card {
+  border-radius: 20px;
+  background: white;
+
+  @media (min-width: $general-break-point) {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+  }
+}
+
+.transparent-card {
+  background: radial-gradient(158.47% 95.91% at -49.58% 15.24%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3.46337px -3.46337px 173.168px rgba(255, 255, 255, 0.02), inset 3.46337px 3.46337px 2.77069px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(29.0923px);
+  border-radius: 8px;
+  width: 100% !important;
+  border: $border-for-transparent-element;
+}

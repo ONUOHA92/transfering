@@ -1,0 +1,56 @@
+@import "../../../../styles/variables.scss";
+
+#player-focus {
+  background-image: url("../../../../static/images/player-focus.jpg");
+  background-size: cover;
+}
+
+#first-pane-layer-1,
+#second-pane-layer-2 {
+  width: 100%;
+  @media (min-width: $general-break-point) {
+    width: 50%;
+  }
+}
+
+#player-focus-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 104.5%;
+  color: white;
+}
+
+#player-focus-card {
+  background: radial-gradient(
+      158.47% 95.91% at 49.58% 15.24%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(238, 236, 236, 0) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: inset -3.46337px -3.46337px 173.168px rgba(255, 255, 255, 0.02);
+  border-radius: 0px 20px 0px 0px;
+  width: 400px;
+  border: 0.1px solid #6d6969;
+  #player-name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 180%;
+    color: #b9349c;
+    font-weight: bold;
+  }
+  .player-text-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 190.5%;
+    color: #f1f1ff;
+  }
+}
+
+#cr7 {
+  width: 42%;
+  height: 993.01px;
+  position: absolute;
+}

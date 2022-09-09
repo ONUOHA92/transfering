@@ -1,0 +1,51 @@
+@import "../styles/variables.scss";
+
+#home-layout {
+  background-image: url("../static/images/top-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1010px;
+  #home-layout-overlay {
+    background: linear-gradient(
+      30.23deg,
+      #010405 -16.28%,
+      rgba(2, 61, 116, 0.22) 266.28%
+    );
+    height: 1010px;
+
+    #top-content-container {
+      #connecting {
+        font-family: "Plus Jakarta Text", sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+      }
+      #down-btn {
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+        border-radius: 40px;
+      }
+      #about-text {
+        font-family: "Spantaran", sans-serif;
+      }
+      @media (min-width: $general-break-point) {
+        margin-top: 300px;
+      }
+    }
+  }
+}
+
+.general-layout {
+  background: #05182A;
+}
+
+.auth-layout {
+  background-image: url("../static/images/auth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media (min-width: $general-break-point) {
+    padding-left: 230px;
+    padding-right: 230px;
+  }
+}

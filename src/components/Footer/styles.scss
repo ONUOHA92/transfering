@@ -1,0 +1,36 @@
+footer {
+  background-image: url("../../static/images/footer-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  .footer-top-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.9;
+  }
+  .pick-of-the-week {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 189%;
+    color: #FFFFFF;
+    opacity: 0.9;
+  }
+  .hr-line {
+    border-bottom: 1px solid #FFFFFF;
+    height: 1px;
+    width: 70%;
+  }
+  .start-text {
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.1176px;
+    line-height: 189%;
+    color: #FFFFFF;
+    opacity: 0.9;
+  }
+}

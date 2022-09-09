@@ -1,0 +1,8 @@
+@import "../../styles/variables.scss";
+
+.element-space {
+  @media (min-width: $general-break-point) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}

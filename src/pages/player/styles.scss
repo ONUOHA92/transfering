@@ -1,0 +1,63 @@
+.player-pane-one {
+    @media (min-width: 1200px) {
+        width: 60%;
+    }
+}
+
+.player-pane-two {
+    @media (min-width: 1200px) {
+        width: 40%;
+    }
+}
+
+.description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 169.5%;
+    color: #E4F0FB;
+    opacity: 0.9;
+}
+
+.value {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 169.5%;
+    color: #E4F0FB;
+    opacity: 0.9;
+}
+
+.side-pc-1 {
+    width: 40%;
+}
+
+.side-pc-2 {
+    width: 60%;
+}
+
+.space-left {
+    padding-right: 10px;
+}
+
+.space-right {
+    padding-left: 10px;
+}
+
+.card-heading {
+    font-family: 'Spantaran';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 113%;
+    color: #E4F0FB;
+}
+
+.season-stats {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 212%;
+    color: #E4F0FB;
+    opacity: 0.9;
+}
