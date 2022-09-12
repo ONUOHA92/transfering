@@ -7,24 +7,46 @@ import Button from "../../../components/Buttons/Button.tsx";
 import "../styles.scss";
 
 
-const PhaseFour = ({ handleNextStep }:any): JSX.Element => {
+
+
+
+const PhaseFour = ({ handleNextStep, coach, setCoach }: any): JSX.Element => {
+
+
+  const onFileChange = (e: any) => {
+    console.log(e.target.files[0])
+    setCoach({ ...coach, image: [...coach.image, e.target.files[0]] })
+  }
+
   return (
     <div>
       <p className="reg-label mb-2">Licenses/Certificates (Image)</p>
       <div className="mt-1">
-        <Uploader />
+        <Uploader
+          type='file'
+          onChange={onFileChange}
+        />
+
       </div>
       <p className="reg-label mb-2 mt-8">Diploma Certificate (Image)</p>
       <div className="mt-1">
-        <Uploader />
+        <Uploader
+          type='file'
+          value={coach.image}
+          onChange={onFileChange}
+        />
       </div>
       <p className="reg-label mb-2 mt-8">Other Trainings & Certifications (Image)</p>
       <div className="mt-1">
-        <Uploader />
+        <Uploader
+          type='file'
+          value={coach.image}
+          onChange={onFileChange}
+        />
       </div>
 
       <p className="reg-label mb-2 mt-8">Other Trainings & Certifications (Image)</p>
-      <textarea className="input w-full txt-area px-5 py-5"></textarea>
+      <textarea className="input w-full txt-area px-5 py-5" />
       <div className="flex justify-center py-10">
         <Button
           onClick={handleNextStep}

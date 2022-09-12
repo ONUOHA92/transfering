@@ -16,12 +16,12 @@ const clubs: Array<string> = [
   "Bayern Munich"
 ];
 
-const PhaseThree = ({ handleNextStep }:any): JSX.Element => {
+const PhaseThree = ({ handleNextStep }: any): JSX.Element => {
   return (
     <div>
       <form onSubmit={handleNextStep}>
         <div className="w-full mt-5">
-          <p className="reg-label mb-2">Current City</p>
+          <p className="reg-label mb-2">Previous/Current Club</p>
           <Select defaultList="Previous/Current Club" options={clubs} />
         </div>
         <div className="flex">
@@ -44,8 +44,8 @@ const PhaseThree = ({ handleNextStep }:any): JSX.Element => {
           </div>
         </div>
         <div className="flex justify-center py-14">
-            <Button label="Complete Registration" customedClasses="py-5 px-20" />
-          </div>
+          <Button label="Complete Registration" customedClasses="py-5 px-20" />
+        </div>
       </form>
     </div>
   );
