@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify'
+import { userLogin } from '../../redux/features/userAction'
 
 // @ts-ignore
 import AuthLayout from "../../Layouts/Auth.tsx";
@@ -19,17 +21,38 @@ import "./styles.scss";
 
 const Login = (): JSX.Element => {
   const history = useNavigate();
+  const dispatch = useDispatch()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  const { userInfo, } = useSelector((state: any) => state.user)
 
 
+  useEffect(() => {
+    setTimeout(() => {
+      if (userInfo) {
+        toast.success(userInfo?.message, {
+          position: toast.POSITION.TOP_RIGHT
+        });
 
+        history('/coach')
+      }
+    }, 1000);
+
+  }, [history, userInfo])
 
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
-    console.log(email, password);
+    const loginCredintial = {
+      email,
+      password
+    }
+    dispatch(userLogin(loginCredintial))
+    console.log(loginCredintial);
+    setEmail('')
+    setPassword('')
+
   }
 
 
@@ -51,7 +74,7 @@ const Login = (): JSX.Element => {
                     <p className="mb-3">Email Address</p>
                     <Email
                       type="text"
-                      Placeholder="Enter email adress"
+                      placeholder="Enter email adress"
                       value={email}
                       onChange={(e: any) => setEmail(e.target.value)}
                     />
@@ -60,18 +83,18 @@ const Login = (): JSX.Element => {
                     <p className="mb-3">Password</p>
                     <Password
                       type='password'
-                      Placeholder="Enter password"
+                      placeholder="Password"
                       value={password}
                       onChange={(e: any) => setPassword(e.target.value)}
                     />
                   </div>
                   <div>
-                    <button className="float-right mt-5" onSubmit={handleSubmit}>
+                    <button type="submit" className="float-right mt-5" >
                       Forgot Password?
                     </button>
                   </div>
                   <div className="flex justify-center mt-28">
-                    <Button label="Log in" customedClasses="py-5 px-28" />
+                    <Button label="Log in" customedClasses="py-5 px-28" onClick={handleSubmit} />
                   </div>
                   <div className="flex justify-center mt-14">
                     <p>Don't have an Account? <span className="text-red-700 cursor-pointer">Sign Up</span> here</p>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // @ts-ignore
 import AuthLayout from "../../Layouts/Auth.tsx";
@@ -18,14 +18,75 @@ import PhaseFour from "./signup-as-coach-components/PhaseFour.tsx";
 import Step from "../../components/step/index.tsx";
 import "./styles.scss";
 
-const Coach = (): JSX.Element => {
+
+
+
+const Coach = () => {
+
   const [phase, setPhase] = useState<number>(1);
   const [isDone, setIsDone] = useState<boolean>(false);
+
+
+  const [coach, setCoach] = useState({
+    firstname: '',
+    surname: '',
+    dob: '',
+    nationality: '',
+    languages: '',
+    formerTeams: '',
+    currentTeam: '',
+    currentCity: '',
+    phoneNumber: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    image: [],
+  })
+
+  const {
+    email,
+    surname,
+    dob,
+    nationality,
+    confirmPassword,
+    password,
+    phoneNumber,
+    languages,
+    image,
+    currentCity,
+    currentTeam,
+  } = coach;
+
+  useEffect(() => {
+    console.log(coach.image)
+  }, [coach.image])
+
+  const formData = new FormData();
+
+  formData.append('email', email);
+  formData.append('surname', surname);
+  formData.append('dob', dob);
+  formData.append('nationality', nationality)
+  formData.append('confirmPassword', confirmPassword)
+  formData.append('phoneNumber', phoneNumber)
+  formData.append('password', password)
+  formData.append('languages', languages)
+  formData.append('currentCity', currentCity)
+  formData.append('currentTeam', currentTeam)
+
+
+
   const navigate = useNavigate();
-  
   const handleNextStep = (event: any): void => {
     event.preventDefault();
+
     if (phase === 4) {
+      for (let i = 0; i < image.length; i++) {
+        formData.append('image', image[i]);
+      }
+      const data = (Object.fromEntries(formData))
+      console.log(data, 'data')
+
       handleCompleteRegistration();
       return
     }
@@ -37,7 +98,7 @@ const Coach = (): JSX.Element => {
     setPhase(phase - 1);
     setIsDone(false);
   };
-  
+
   const handleCompleteRegistration = (): void => setIsDone(true);
   return (
     <div>
@@ -82,10 +143,10 @@ const Coach = (): JSX.Element => {
                   />
                 </div>
                 <div className="mt-10">
-                  {phase === 1 && <PhaseOne handleNextStep={handleNextStep} />}
-                  {phase === 2 && <PhaseTwo  handleNextStep={handleNextStep} />}
-                  {phase === 3 && <PhaseThree handleNextStep={handleNextStep} />}
-                  {phase === 4 && <PhaseFour handleNextStep={handleNextStep} />}
+                  {phase === 1 && <PhaseOne handleNextStep={handleNextStep} coach={coach} setCoach={setCoach} />}
+                  {phase === 2 && <PhaseTwo handleNextStep={handleNextStep} coach={coach} setCoach={setCoach} />}
+                  {phase === 3 && <PhaseThree handleNextStep={handleNextStep} coach={coach} setCoach={setCoach} />}
+                  {phase === 4 && <PhaseFour handleNextStep={handleNextStep} coach={coach} setCoach={setCoach} />}
                 </div>
               </div>
             </div>

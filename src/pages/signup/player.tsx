@@ -19,8 +19,32 @@ import "./styles.scss";
 const Player = (): JSX.Element => {
   const [phase, setPhase] = useState<number>(1);
   const [isDone, setIsDone] = useState<boolean>(false);
+  const [data, setData] = useState({
+    firstName: '',
+    surName: '',
+    dateOfBirth: '',
+    nationality: '',
+    weight: '',
+    height: '',
+    position: '',
+    language: '',
+    videoLink: '',
+    foot: '',
+    info: '',
+    city: '',
+    instagram: '',
+    email: '',
+    phoneNumber: '',
+    linkedin: '',
+    twitter: ''
+
+
+  })
+
+
+
   const navigate = useNavigate();
-  
+
   const handleNextStep = (event: any): void => {
     event.preventDefault();
     if (phase === 4) {
@@ -35,7 +59,7 @@ const Player = (): JSX.Element => {
     setPhase(phase - 1);
     setIsDone(false);
   };
-  
+
   const handleCompleteRegistration = (): void => setIsDone(true);
   return (
     <div>
@@ -74,9 +98,9 @@ const Player = (): JSX.Element => {
                   />
                 </div>
                 <div className="mt-10">
-                  {phase === 1 && <PhaseOne handleNextStep={handleNextStep} />}
-                  {phase === 2 && <PhaseTwo handleNextStep={handleNextStep} />}
-                  {phase === 3 && <PhaseThree handleNextStep={handleNextStep} />}
+                  {phase === 1 && <PhaseOne handleNextStep={handleNextStep} data={data} setData={setData} />}
+                  {phase === 2 && <PhaseTwo handleNextStep={handleNextStep} data={data} setData={setData} />}
+                  {phase === 3 && <PhaseThree handleNextStep={handleNextStep} data={data} setData={setData} />}
                 </div>
               </div>
             </div>

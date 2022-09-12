@@ -1,10 +1,17 @@
 import React from "react";
 import "./styles.scss";
 
-const Password = ({Placeholder}:any): JSX.Element => {
+const Password = ({ placeholder, type, value, onChange }: any): JSX.Element => {
   return (
     <div>
-      <input type="password" className="input py-4 px-5 w-full" placeholder={Placeholder} />
+      <input
+        type={type}
+        className="input py-4 px-5 w-full"
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
+
     </div>
   )
 }
