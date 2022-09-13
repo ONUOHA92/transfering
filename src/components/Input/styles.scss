@@ -13,8 +13,8 @@
 }
 
 .uploader {
-  background: #E9F1F8;
-  border: 1px dashed #0757A0;
+  background: #e9f1f8;
+  border: 1px dashed #0757a0;
   border-radius: 5px;
 
   input[type="file"] {
@@ -32,14 +32,19 @@
     }
 
     &:last-child {
-      color: #0757A0
+      color: #0757a0;
     }
   }
 }
 
 .trans-text-input {
-  background: radial-gradient(158.47% 95.91% at -49.58% 15.24%, rgba(255, 255, 255, 0.267) 0%, rgba(255, 255, 255, 0.089) 100%);
-  box-shadow: inset -3.46337px -3.46337px 173.168px rgba(255, 255, 255, 0.02), inset 3.46337px 3.46337px 2.77069px rgba(255, 255, 255, 0.1);
+  background: radial-gradient(
+    158.47% 95.91% at -49.58% 15.24%,
+    rgba(255, 255, 255, 0.267) 0%,
+    rgba(255, 255, 255, 0.089) 100%
+  );
+  box-shadow: inset -3.46337px -3.46337px 173.168px rgba(255, 255, 255, 0.02),
+    inset 3.46337px 3.46337px 2.77069px rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(29.0923px);
   border-radius: 8px;
   border: $border-for-transparent-element;
