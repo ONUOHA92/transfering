@@ -1,29 +1,26 @@
+import "./styles.scss";
 
 interface Props {
-  type: any,
-  onChange: any
-  placeholder: any
-  style: object,
-  accept: any
+  type: string;
+  onChange: () => void;
+  placeholder: string;
+  accept: string;
 }
 
-
-const Uploader = ({ type, onChange, style, accept }: Props): JSX.Element => {
+const Uploader = ({ onChange, accept }: Props): JSX.Element => {
   return (
     // className="uploader py-6"
-    <div>
-      <div>
-        <input
-          type={type}
-          accept={accept}
-          style={style}
-          onChange={onChange} />
-        <div className="flex justify-center">
-          <span>Drag and Drop doument here or</span>
-          <span className="cursor-pointer px-1">browse</span>
+    <label>
+      <div className="w-full uploader py-6 cursor-pointer">
+        <div>
+          <input type={"file"} accept={accept} onChange={onChange} />
+          <div className="flex justify-center">
+            <span>Drag and Drop doument here or</span>
+            <span className="cursor-pointer px-1">browse</span>
+          </div>
         </div>
       </div>
-    </div>
+    </label>
   );
 };
 
