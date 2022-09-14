@@ -5,31 +5,34 @@ import Button from "../../../components/Buttons/Button.tsx";
 
 import "../styles.scss";
 
-const PhaseFour = ({ handleNextStep, coach, setCoach }: any): JSX.Element => {
-  const handleGetChangeValue = (e: any) => {
-    console.log("Res log ===>", e.target.files[0]);
-  };
+const PhaseFour = ({ handleNextStep, handleGetFileOne, handleGetFileTwo, handleGetFileThree }: any): JSX.Element => {
+  // const handleGetChangeValue = (e: any) => {
+  //   console.log("Res log ===>", e.target.files[0]);
+  // };
 
-  const onFileChange = (e: any) => {
-    console.log(e.target.files[0]);
-    setCoach({ ...coach, image: [...coach.image, e.target.files[0]] });
-  };
+
+  // const onFileChange = (e: any) => {
+  //   console.log(e.target.files[0]);
+
+
+
+
 
   return (
     <div>
       <p className="reg-label mb-2">Licenses/Certificates (Image)</p>
       <div className="mt-1">
-        <Uploader type="file" onChange={handleGetChangeValue} />
+        <Uploader type="file" onChange={handleGetFileOne} />
       </div>
       <p className="reg-label mb-2 mt-8">Diploma Certificate (Image)</p>
       <div className="mt-1">
-        <Uploader type="file" value={coach.image} onChange={onFileChange} />
+        <Uploader type="file" onChange={handleGetFileTwo} />
       </div>
       <p className="reg-label mb-2 mt-8">
         Other Trainings & Certifications (Image)
       </p>
       <div className="mt-1">
-        <Uploader type="file" value={coach.image} onChange={onFileChange} />
+        <Uploader type="file" onChange={handleGetFileThree} />
       </div>
 
       <p className="reg-label mb-2 mt-8">
